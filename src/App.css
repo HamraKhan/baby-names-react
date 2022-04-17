@@ -42,8 +42,16 @@
 }
 
 .baby-name {
-  border: black solid 2px;
+  border: none solid 2px;
   border-radius: 19px;
   padding: 0 14px 0 14px;
   margin: 3px;
+}
+
+.male-color{
+  background-color: rgb(74, 148, 245);
+}
+
+.female-color{
+  background-color: pink;
 }
