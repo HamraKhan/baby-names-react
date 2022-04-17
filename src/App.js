@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Names from './Names.js';
+import babyNamesData from "./babyNamesData.json"; 
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {babyNamesData.map((babyName) => {
+        return (
+          <div className='baby-name'>
+            <Names name={babyName.name} />
+          </div>
+        );
+      })}
     </div>
   );
 }

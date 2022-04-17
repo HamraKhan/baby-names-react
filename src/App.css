@@ -1,5 +1,9 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 86px;
 }
 
 .App-logo {
@@ -35,4 +39,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.baby-name {
+  border: black solid 2px;
+  border-radius: 19px;
+  padding: 0 14px 0 14px;
+  margin: 3px;
 }
