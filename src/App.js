@@ -14,13 +14,15 @@ function genderColor(gender) {
 function App() {
   return (
     <div className="App">
-      {babyNamesData.map((babyName) => {
-        return (
-          <div className={`baby-name ${genderColor(babyName.sex)}`}>
-            <Names name={babyName.name} />
-          </div>
-        );
-      })}
+      {babyNamesData
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .map((babyName) => {
+          return (
+            <div className={`baby-name ${genderColor(babyName.sex)}`}>
+              <Names name={babyName.name} />
+            </div>
+          );
+        })}
     </div>
   );
 }
