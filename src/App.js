@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import './App.css';
 import Names from './Names.js';
 import babyNamesData from "./babyNamesData.json"; 
-import FilterNames from './FilterNames';
 
 function genderColor(gender) {
   if (gender === "m") {
@@ -34,9 +33,12 @@ function App() {
           );
         })
         .sort((a, b) => a.name.localeCompare(b.name))
-        .map((babyName) => {
+        .map((babyName, index) => {
           return (
-            <div className={`baby-name ${genderColor(babyName.sex)}`}>
+            <div
+              key={index}
+              className={`baby-name ${genderColor(babyName.sex)}`}
+            >
               <Names name={babyName.name} />
             </div>
           );
